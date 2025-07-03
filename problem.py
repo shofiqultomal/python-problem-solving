@@ -61,3 +61,31 @@ if __name__ == "__main__":
             remove_every_nth(numbers, n)
     except ValueError:
         print("Invalid input! Please enter an integer.")
+
+# Write a Python program to make combinations of 3 digits.
+
+import itertools
+
+# Digits from 0 to 9
+print(f"numbar combinations : ")
+digits = list(range(10))
+
+# Generate all combinations of 3 different digits
+combinations = list(itertools.combinations(digits, 3))
+
+# Print the combinations
+for combo in combinations:
+    print(combo)
+
+print(f"\nTotal combinations: {len(combinations)}")
+
+
+#Write a Python program that prints long text, converts it to a list, and prints all the words and the frequency of each word.
+
+string_words = "python is great .  i love python .python is human readeble language. "
+word_list = string_words.split()
+
+word_freq = [word_list.count(n) for n in word_list]
+print("String:\n {} \n".format(string_words))
+print("List:\n {} \n".format(str(word_list)))
+print("Pairs (Words and Frequencies:\n {}".format(str(list(zip(word_list, word_freq)))))
