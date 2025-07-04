@@ -123,3 +123,39 @@ print(f"The even numbers are: {even_numbers}")
 print(f"The odd numbers are: {odd_numbers}")
 print(f"Count of even numbers: {len(even_numbers)}")
 print(f"Count of odd numbers: {len(odd_numbers)}")
+
+
+
+# find max value and mim value in a list
+
+user_input = input("Enter numbers separated by space: ")
+numbers=[int(num) for num in user_input.split()]
+maximum = max(numbers)
+minimum = min (numbers)
+print(f"The maximum value is : {maximum}")
+print(f"The minimum value is : {minimum}")
+
+#Problem Statement: Josephus Problem (Simplified)
+people = input("Enter the all people: ")
+cycle = [int(num) for num in people.split()]
+n = int(input("nth number person to be removed: "))
+index = 0
+
+while len(cycle) > 2:  # Run until only one person is left
+    index = (index + n - 1) % len(cycle)
+    removed = cycle.pop(index)
+    print(f"Removed: {removed}")
+
+print(f"The last remaining person is: {cycle[1]}")
+
+
+
+# if variable is strung
+while len(people) > 1:
+    index = (index + k - 1) % len(people)  # Calculate next index to remove
+    removed = people.pop(index)
+    print(f"Removed: {removed}")
+
+# Print the last remaining person
+print(f"Last Remaining: {people[0]}")
+
