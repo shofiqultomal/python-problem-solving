@@ -89,3 +89,37 @@ word_freq = [word_list.count(n) for n in word_list]
 print("String:\n {} \n".format(string_words))
 print("List:\n {} \n".format(str(word_list)))
 print("Pairs (Words and Frequencies:\n {}".format(str(list(zip(word_list, word_freq)))))
+
+
+# write a python program create a list and count even or odd number
+numbers = [1,2,3,4,5,6,7,8,9]
+even_numbers =[]
+odd_numbers = []
+for num in numbers:
+    if num % 2 ==0:
+        even_numbers.append(num)
+    else:
+        odd_numbers.append(num)
+
+        print(f"THe even number is : {even_numbers}")
+        print(f"The odd numbers is : {odd_numbers}")
+        print(f"count even is :{len(even_numbers)}")
+        print(f"count odd is : {len(odd_numbers)}")
+
+# here some change of this code if we need to make user input list
+user_input = input("Enter numbers separated by space: ")
+
+numbers = [int(num) for num in user_input.split()]
+even_numbers = []
+odd_numbers = []
+
+for num in numbers:
+    if num % 2 == 0:
+        even_numbers.append(num)
+    else:
+        odd_numbers.append(num)
+
+print(f"The even numbers are: {even_numbers}")
+print(f"The odd numbers are: {odd_numbers}")
+print(f"Count of even numbers: {len(even_numbers)}")
+print(f"Count of odd numbers: {len(odd_numbers)}")
