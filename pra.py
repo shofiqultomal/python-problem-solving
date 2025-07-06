@@ -1,14 +1,11 @@
-people = input("Enter the people in cycle :")
-cycle = people.split()
-n=int(input("Enter the number of people :"))
-index = 0
-while len(cycle)>1 :
-    index = (index+n-1) % len(cycle)
-    remove=cycle.pop(index)
-    print(f"The removed  : {remove}")
+def factorial(n):
+    result = 0
+    for i in range(1, n+1):
+        result += i
+    return result
 
-
-print(f"The last number people name is : {cycle[0]}")
-
-
-
+num = int(input("Enter a non-negative integer: "))
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    print(f"Factorial of {num} is {factorial(num)}")

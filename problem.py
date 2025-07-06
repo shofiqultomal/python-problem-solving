@@ -159,3 +159,13 @@ while len(people) > 1:
 # Print the last remaining person
 print(f"Last Remaining: {people[0]}")
 
+# 2rd.........
+numbers=input("Enter the number is : ")
+input_num=[int(num)for num in numbers.split()]
+unique_numbers=list(set(input_num))
+if len(unique_numbers)<2:
+    print("There is no 2rd higest number in here .")
+else:
+    unique_numbers.sort(reverse=True)
+    print("The 2rd higest number is: {}".format(unique_numbers[1]))
+
